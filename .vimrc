@@ -33,6 +33,10 @@ Plugin 'git@github.com:tarekbecker/vim-yaml-formatter.git'
 Plugin 'git@github.com:mileszs/ack.vim'
 Plugin 'git@github.com:mgedmin/coverage-highlight.vim.git'
 Plugin 'git@github.com:majutsushi/tagbar.git'
+Plugin 'hashivim/vim-terraform'
+Plugin 'git@github.com:martinda/Jenkinsfile-vim-syntax.git'
+Plugin 'git@github.com:thecodesmith/vim-groovy.git'
+Plugin 'git@github.com:chiedo/vim-case-convert.git'
 
 " Python specific
 Plugin 'git@github.com:davidhalter/jedi-vim.git'
@@ -153,6 +157,8 @@ nnoremap µ :m .+1<CR>==
 nnoremap ∂ :m .-2<CR>==
 " Paste from + register with <A-v>
 inoremap √ <c-r><c-o>+
+
+inoremap <leader>cts :CamelToSnakeSel
 
 " Remember last position of file
 if has("autocmd")

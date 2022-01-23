@@ -1,11 +1,9 @@
 " ------------------- Settings ----------------------------
-echo PYTHON
-
 " 80 symbols color column
-set colorcolumn=89
+set colorcolumn=121
 highlight ColorColumn ctermbg=233
 highlight OverLength ctermfg=244
-match OverLength /\%89v.*/
+match OverLength /\%121v.*/
 
 " Enable advanced python syntax
 let g:python_highlight_all = 1
@@ -22,12 +20,13 @@ let g:jedi#rename_command = "<leader>jr"
 
 " Ale
 let g:ale_fixers = {'python': ['isort', 'black']}
-let g:ale_linters = {'python': ['pylint', 'prospector', 'flake8']}
+let g:ale_linters = {'python': ['pylint', 'prospector', 'mypy', 'bandit']}
 let g:ale_completion_enabled = 1
 let g:ale_completion_delay = 1
 let g:airline#extensions#ale#enabled = 1
 let g:ale_set_highlights = 1
 let g:ale_lint_on_enter = 1
+let g:ale_python_isort_options = '--settings-path .'
 
 
 " Ale fix
