@@ -37,6 +37,7 @@ Plugin 'hashivim/vim-terraform'
 Plugin 'git@github.com:martinda/Jenkinsfile-vim-syntax.git'
 Plugin 'git@github.com:thecodesmith/vim-groovy.git'
 Plugin 'git@github.com:chiedo/vim-case-convert.git'
+Plugin 'git@github.com:EvanDotPro/nerdtree-chmod.git'
 
 " Python specific
 Plugin 'git@github.com:davidhalter/jedi-vim.git'
@@ -94,6 +95,8 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.pyc$', '\.egg-info[[dir]]', '__pycache__', 'build$', 'dist', 'vendor', '\.zip$']
 " Format yaml lists with extra
 let g:yaml_formatter_indent_collection=1
+" SnipMate
+let g:snipMate = { 'snippet_version' : 1 }
 " ----------------------- mappings ------------------------------
 
 " Normal mode
