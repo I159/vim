@@ -40,7 +40,6 @@ Plugin 'git@github.com:chiedo/vim-case-convert.git'
 Plugin 'git@github.com:EvanDotPro/nerdtree-chmod.git'
 
 " Python specific
-Plugin 'git@github.com:davidhalter/jedi-vim.git'
 Plugin 'git@github.com:jeetsukumaran/vim-indentwise.git'
 Plugin 'git@github.com:w0rp/ale.git'
 Plugin 'git@github.com:sheerun/vim-polyglot.git'
@@ -61,6 +60,9 @@ filetype plugin indent on " Use indentation scripts located in the indent folder
 filetype plugin on " Enable plugin vim scripts located in ftplugin directory
 syntax on " Syntax on... Any kind of
 colorscheme wombat256mod " Color scheme wombat256
+
+"set runtimepath+=~/.vim/bundle/python3
+let g:python3_host_prog = system("which python")
 
 set nocompatible " Disable vi compatibility
 set nu " Set line numbers
@@ -92,7 +94,7 @@ let mapleader = "," " Set leader
 let g:AutoPairsShortcutToggle = '<leader>pp' " Auto pairs toggle
 " NERDTree
 let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['\.pyc$', '\.egg-info[[dir]]', '__pycache__', 'build$', 'dist', 'vendor', '\.zip$']
+let NERDTreeIgnore = ['\.pyc$', '\.egg-info[[dir]]', '__pycache__', 'dist', 'vendor', '\.zip$']
 " Format yaml lists with extra
 let g:yaml_formatter_indent_collection=1
 " SnipMate
