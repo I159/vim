@@ -26,7 +26,6 @@ Plugin 'git@github.com:michalbachowski/vim-wombat256mod.git'
 Plugin 'git@github.com:MarcWeber/vim-addon-mw-utils.git'
 Plugin 'git@github.com:tpope/vim-surround.git'
 Plugin 'git@github.com:tpope/vim-eunuch.git'
-Plugin 'git@github.com:airblade/vim-gitgutter.git'
 Plugin 'git@github.com:scrooloose/nerdtree.git'
 Plugin 'git@github.com:elzr/vim-json.git'
 Plugin 'git@github.com:tarekbecker/vim-yaml-formatter.git'
@@ -38,6 +37,12 @@ Plugin 'git@github.com:martinda/Jenkinsfile-vim-syntax.git'
 Plugin 'git@github.com:thecodesmith/vim-groovy.git'
 Plugin 'git@github.com:chiedo/vim-case-convert.git'
 Plugin 'git@github.com:EvanDotPro/nerdtree-chmod.git'
+Plugin 'git@github.com:davidhalter/jedi-vim.git'
+Plugin 'git@github.com:rking/ag.vim.git'
+Plugin 'git@github.com:tpope/vim-fugitive.git'
+Plugin 'git@github.com:vim-test/vim-test.git'
+Plugin 'git@github.com:airblade/vim-gitgutter.git'
+Plugin 'git@github.com:github/copilot.vim.git'
 
 " Python specific
 Plugin 'git@github.com:jeetsukumaran/vim-indentwise.git'
@@ -155,6 +160,9 @@ nnoremap <F8> :TagbarToggle<CR>
 nnoremap <leader>jf :execute '%!python -m json.tool'<CR>
 " yaml autoformat
 nnoremap <leader>yf :YAMLFormat<CR>
+
+" Run nearest test
+nmap <silent> <leader>t :TestNearest<CR>
 
 " Move line down <A-m>
 nnoremap µ :m .+1<CR>==

@@ -13,11 +13,9 @@ let g:python_highlight_all = 1
 "let g:ale_python_pycodestyle_options = '--ignore=E501'
 let g:ale_fixers = {'python': ['isort', 'black', 'autoimport', 'pyflyby']}
 let g:ale_linters = {'python': ['pylint', 'prospector', 'mypy', 'bandit']}
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 let g:ale_completion_delay = 1
-let g:airline#extensions#ale#enabled = 1
 let g:ale_set_highlights = 1
-let g:ale_lint_on_enter = 1
 let g:ale_python_isort_options = '--settings-path .'
 let g:ale_python_black_options='--line-length=120'
 "let g:ale_python_pylint_options = '--rcfile .pylintrc'
