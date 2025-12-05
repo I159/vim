@@ -21,7 +21,7 @@ Plugin 'git@github.com:tomtom/tlib_vim.git'
 Plugin 'git@github.com:vim-airline/vim-airline.git'
 Plugin 'git@github.com:jeetsukumaran/vim-buffergator.git'
 Plugin 'git@github.com:garbas/vim-snipmate.git'
-Plugin 'git@github.com:I159/vim-snippets.git'
+Plugin 'git@github.com:honza/vim-snippets.git'
 Plugin 'git@github.com:michalbachowski/vim-wombat256mod.git'
 Plugin 'git@github.com:MarcWeber/vim-addon-mw-utils.git'
 Plugin 'git@github.com:tpope/vim-surround.git'
@@ -42,7 +42,7 @@ Plugin 'git@github.com:rking/ag.vim.git'
 Plugin 'git@github.com:tpope/vim-fugitive.git'
 Plugin 'git@github.com:vim-test/vim-test.git'
 Plugin 'git@github.com:airblade/vim-gitgutter.git'
-Plugin 'git@github.com:github/copilot.vim.git'
+"Plugin 'git@github.com:github/copilot.vim.git'
 
 " Python specific
 Plugin 'git@github.com:jeetsukumaran/vim-indentwise.git'
@@ -67,7 +67,7 @@ syntax on " Syntax on... Any kind of
 colorscheme wombat256mod " Color scheme wombat256
 
 "set runtimepath+=~/.vim/bundle/python3
-let g:python3_host_prog = system("which python")
+" Python3 host prog is now set in init.vim for neovim
 
 set nocompatible " Disable vi compatibility
 set nu " Set line numbers
@@ -89,7 +89,10 @@ set swapfile
 set dir=/tmp
 set backupdir=/tmp
 set directory=/tmp
-set pastetoggle=<f5> " Toggle paste mode
+" Paste toggle (neovim uses :set paste! instead)
+if !has('nvim')
+    set pastetoggle=<f5>
+endif
 set foldmethod=manual
 set foldlevel=10 " Keep folds opened
 set scrolloff=50 " Keep cursor centered
@@ -104,6 +107,9 @@ let NERDTreeIgnore = ['\.pyc$', '\.egg-info[[dir]]', '__pycache__', 'dist', 'ven
 let g:yaml_formatter_indent_collection=1
 " SnipMate
 let g:snipMate = { 'snippet_version' : 1 }
+" Override Neovim's native snippet Tab mapping to use SnipMate
+imap <Tab> <Plug>snipMateNextOrTrigger
+smap <Tab> <Plug>snipMateNextOrTrigger
 " ----------------------- mappings ------------------------------
 
 " Normal mode
