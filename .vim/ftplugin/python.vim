@@ -43,3 +43,5 @@ let g:jedi#usages_command = "<leader>ju"
 "let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>jr"
 "let g:jedi#rename_command_keep_name = "<leader>R"
+
+setlocal omnifunc=jedi#completions
